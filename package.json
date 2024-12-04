@@ -1,0 +1,23 @@
+{
+  "name": "notification-service",
+  "version": "1.0.0",
+  "description": "notification services",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "jokovip",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
+    "telegraf": "^4.12.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "pm2": "^5.4.3"
+  }
+}
