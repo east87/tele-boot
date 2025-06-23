@@ -7,7 +7,9 @@ const telegramRoutes = require('./routes/telegram.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+app.get('/health_check', (req, res) => {
+  res.status(200).json({ status: 'healthy', message: 'Push Notification Service is up and running!' });
+});
 // Middleware
 app.use(bodyParser.json());
 
@@ -17,5 +19,5 @@ app.use('/api/telegram', telegramRoutes);
 
 // Start Server
 app.listen(PORT, () => {
-  console.log(`Push Notification Service running on http://localhost:${process.env.PORT}`);
+  console.log(`Push Notification Service running on http://localhost:${PORT}`);
 });

@@ -2,6 +2,5 @@ const express = require('express');
 const telegramController = require('../controllers/telegramController');
 
 const router = express.Router();
-router.post('/send', telegramController.sendMessage);
-
+router.post('/send_message', telegramController.sendMessage);
 module.exports = router;
